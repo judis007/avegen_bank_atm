@@ -1,0 +1,15 @@
+<%= form_with url: accounts_path do |form| %>
+    <div class = 'd-flex justify-content-center vertical-center'>
+    <div class="row g-3">
+        <div class="col-auto">
+        <%= form.text_field :pin, class: 'form-control-lg', placeholder: 'PIN' %>
+        </div>
+
+        <%= form.hidden_field :account_number, value: @account_number %>
+
+        <div class="col-auto">
+        <%= form.submit "Proceed", class: 'btn-lg btn-success' %>
+        </div>
+    </div>
+    </div>
+<% end %>

@@ -1,0 +1,8 @@
+<h1 class = 'd-flex justify-content-center fixed-top'>Please select an option</h1>
+<div class = 'd-flex justify-content-center vertical-center'>
+    <div class="row g-3">
+        <%= link_to "Withdraw", new_account_transaction_path(option: "withdraw", account_id: @account_id, user_account: @user_account_id), class: 'btn-lg btn-danger' %>
+        <%= link_to "Balance", new_account_transaction_path(option: "balance", account_id: @account_id, user_account: @user_account_id), class: 'btn-lg btn-dark' %>
+        <%= link_to "Deposit", new_account_transaction_path(option: "deposit", account_id: @account_id, user_account: @user_account_id), class: 'btn-lg btn-success' %>
+    </div>
+</div>

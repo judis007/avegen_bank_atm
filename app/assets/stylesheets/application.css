@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+ .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+  h1{
+    margin-top: 50px !important;
+  }
+
+  .btn-lg{
+    text-decoration: none;
+  }
