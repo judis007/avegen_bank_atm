@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'new', to: 'account_transactions#new', as: 'new_account_transaction'
   post 'operations', to: 'account_transactions#operations'
   get 'options', to: 'pages#select_options'
+  get 'receipt', to: 'account_transactions#receipt'
 
   # get '*path' => redirect('/')
 

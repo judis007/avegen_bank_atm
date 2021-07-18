@@ -1,14 +1,16 @@
+<h1 class = 'd-flex justify-content-center fixed-top'><span><%= @welcome_account_holder %></span></h1>
+
 <%= form_with url: accounts_path do |form| %>
     <div class = 'd-flex justify-content-center vertical-center'>
     <div class="row g-3">
         <div class="col-auto">
-        <%= form.text_field :pin, class: 'form-control-lg', placeholder: 'PIN' %>
+        <%= form.text_field :pin, class: 'form-control-lg', placeholder: 'PIN', required: true %>
         </div>
 
         <%= form.hidden_field :account_number, value: @account_number %>
 
         <div class="col-auto">
-        <%= form.submit "Proceed", class: 'btn-lg btn-success' %>
+        <%= form.submit "Authenticate", class: 'btn-lg btn-warning' %>
         </div>
     </div>
     </div>

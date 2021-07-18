@@ -15,16 +15,14 @@
   </head>
 
   <body>
+ <% flash.each do |key, message| %>
+  <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center" role="alert">
+    <%= message %>
+  </div>
+<% end %>
 
-    <% flash.each do |type, msg| %>
-      <div class="alert alert-danger">
-        <%= msg %>
-      </div>
-    <% end %>
-
-
-    <div class = 'container'>
+    
       <%= yield %>
-    </div>
+
   </body>
 </html>
