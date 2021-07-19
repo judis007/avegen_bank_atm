@@ -6,6 +6,8 @@ class AccountTransactionsController < ApplicationController
         @option = params[:option]
         @account_id = params[:account_id]
         @user_account_id = params[:user_account]
+
+        AccountTransaction.new
     end
 
     def operations
@@ -16,14 +18,14 @@ class AccountTransactionsController < ApplicationController
         unless account.nil?
             user = account.id
             current_balance = account.balance
-            transaction = AccountTransaction.select(:amount).where(user_account_id: 1).last
+            transaction = AccountTransaction.select(:id, :amount).where(user_account_id: params[:user_account]).last
             transaction_amount = transaction.amount
 
             if params[:option] == 'withdraw'
                 final_balance = current_balance.to_f - transaction_amount.to_f
                 if transaction_amount > current_balance
                     redirect_to root_path
-                    flash[:alert] = "You don't have sufficient balance for the withdrawal!"
+                    flash[:alert] = "You don't have sufficient funds for the withdrawal!"
                 else
                     account.update(balance: final_balance)
                     redirect_to receipt_path(final_balance: final_balance)
