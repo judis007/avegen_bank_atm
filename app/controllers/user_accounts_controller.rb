@@ -14,6 +14,7 @@ class UserAccountsController < ApplicationController
             render 'pin'
         else
             redirect_to root_path
+            flash[:alert] = "Seems like you don't have an account!"
         end
             
     end

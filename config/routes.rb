@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get 'options', to: 'pages#select_options'
   get 'receipt', to: 'account_transactions#receipt'
 
-  # get '*path' => redirect('/')
+  get '*path' => redirect('/')
 
 end

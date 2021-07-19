@@ -9,6 +9,7 @@ class AccountsController < ApplicationController
         if user_account
             unless user_account.password_digest == params[:pin].to_i
                 redirect_to root_path
+                flash[:alert] = 'Sorry! You entered the wrong PIN.'
             end
         end
     end
