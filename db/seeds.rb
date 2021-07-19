@@ -11,6 +11,7 @@ Account.create!(name: 'Current')
 
 User.create!(first_name: "Anna", last_name: "Mary", age: 24)
 UserAccount.create!(account_number: 1234, password_digest: 1234, user_id: 1, account_id: 1)
+UserAccount.create!(account_number: 2468, password_digest: 1234, user_id: 1, account_id: 2)
 
 User.create!(first_name: "Dan", last_name: "Brown", age: 48)
 UserAccount.create!(account_number: 2345, password_digest: 2468, user_id: 2, account_id: 2)

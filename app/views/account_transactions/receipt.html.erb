@@ -5,11 +5,12 @@
     }
 
     h1{
-        color: black;
+        color: gray;
     }
 
+
     span{
-        color: black;
+        color: gray;
     }
 
     .btn-lg{
@@ -19,9 +20,8 @@
 </style>
 
 <h1 class = 'd-flex justify-content-center fixed-top'>Transaction summary</h1>
-<hr class = 'black'>
 
 <div class = 'container'>
-    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Balance: <span>₹<%= @final_balance %></span></h2>
+    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Account balance: ₹<span><%= @final_balance %></span></h2>
     <%= link_to "Click here to finish transaction", root_path, {style: 'margin-top: 200px;', class: 'btn-lg btn-dark d-flex justify-content-center' } %>
 </div>
