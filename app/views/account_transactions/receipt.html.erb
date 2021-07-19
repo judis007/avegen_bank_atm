@@ -1,6 +1,27 @@
+<style>
+    *{
+        background-color: white !important;
+        color: black;
+    }
+
+    h1{
+        color: black;
+    }
+
+    span{
+        color: black;
+    }
+
+    .btn-lg{
+        background-color: black !important;
+        color: white;
+    }
+</style>
+
 <h1 class = 'd-flex justify-content-center fixed-top'>Transaction summary</h1>
+<hr class = 'black'>
 
 <div class = 'container'>
-    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Balance: <span><%= @final_balance %></span> ₹</h2>
-    <%= link_to "Click here to finish transaction", root_path, {style: 'margin-top: 200px;', class: 'btn-lg btn-success d-flex justify-content-center' } %>
+    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Balance: <span>₹<%= @final_balance %></span></h2>
+    <%= link_to "Click here to finish transaction", root_path, {style: 'margin-top: 200px;', class: 'btn-lg btn-dark d-flex justify-content-center' } %>
 </div>
