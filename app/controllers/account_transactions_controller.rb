@@ -1,8 +1,6 @@
 class AccountTransactionsController < ApplicationController
 
-    def amount
-
-    end
+    def amount; end
 
     def new
         @option = params[:option]
@@ -13,11 +11,6 @@ class AccountTransactionsController < ApplicationController
     end
 
     def operations
-        # session[:options] = params[:options]
-        # session[:account_id] = params[:account_id]
-        # session[:user_account_id] = params[:user_account_id]
-
-
         @transaction = AccountTransaction.create!(amount: params[:amount], transaction_type: params[:option], user_account_id: params[:user_account])
         account_name = Account.find(params[:account_id]).name
         account = UserAccount.find_by(user_id: params[:user_account], account_id: params[:account_id])

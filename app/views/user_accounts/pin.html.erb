@@ -2,16 +2,16 @@
 
 <%= form_with url: accounts_path do |form| %>
     <div class = 'd-flex justify-content-center vertical-center'>
-    <div class="row g-3">
-        <div class="col-auto">
-        <%= form.text_field :pin, class: 'form-control-lg', placeholder: 'PIN', required: true %>
-        </div>
+        <div class="row g-3">
+            <div class="col-auto">
+                <%= form.text_field :pin, class: 'form-control-lg', placeholder: 'PIN', required: true %>
+            </div>
 
-        <%= form.hidden_field :account_number, value: @account_number %>
+            <%= form.hidden_field :account_number, value: @account_number %>
 
-        <div class="col-auto">
-        <%= form.submit "Authenticate", class: 'btn-lg btn-warning' %>
+            <div class="col-auto">
+                <%= form.submit "Authenticate", class: 'btn-lg btn-warning' %>
+            </div>
         </div>
-    </div>
     </div>
 <% end %>

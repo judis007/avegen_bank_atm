@@ -1,9 +1,6 @@
 <h1 class = 'd-flex justify-content-center fixed-top'>Transaction summary</h1>
 
 <div class = 'container'>
-
-<h2 class = 'd-flex justify-content-center' style = 'margin-top: 200px;'>Balance: <span><%= Money.new(@final_balance, "INR").format(symbol_position: :after) %></span></h2>
-
-<br><br><br><br><br><br><br><br>
-<%= link_to "Click here to finish transaction", root_path, class: 'btn-lg btn-success d-flex justify-content-center' %>
+    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Balance: <span><%= @final_balance %></span> ₹</h2>
+    <%= link_to "Click here to finish transaction", root_path, {style: 'margin-top: 200px;', class: 'btn-lg btn-success d-flex justify-content-center' } %>
 </div>

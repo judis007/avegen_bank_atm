@@ -1,11 +1,10 @@
 class UserAccountsController < ApplicationController
     
-    def account_number
-    end
+    def account_number; end
 
     def pin
         @account_number = params[:account_number]
-        user_account = UserAccount.find_by(account_number: params[:account_number])
+        user_account = UserAccount.find_by_account_number(params[:account_number])
 
         if user_account
             user_id = user_account.user_id
