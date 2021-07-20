@@ -42,6 +42,8 @@ Add new user accounts by adding the line
     UserAccount.create!(account_number: 1234567890, password_digest: 8796, user_id: 1, account_id: 1)
 
  Here the `user_id` specifies which user you are referring to. The `account_id` specifies which account is that. There are two accounts, which are Savings and Current. Savings has the `account_id` of 1 and Current has the `account_id` of 2.
+ 
+ Also keep in mind that the account_number must always be unique. Even if the same person has different accounts ( ie both Savings and Current ), they must be having different account_numbers, since both are different accounts, right?
 
 Now you have setup your application successfully. Well done!
 
