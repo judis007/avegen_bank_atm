@@ -25,7 +25,19 @@ Now everything has been setup in order to run the application. Now type
 
     rails server
 
-Now go to a web browser ( Firefox or Google Chrome ) and type `localhost:3000` in the search bar. Enjoy!
+Now go to a web browser ( Firefox or Google Chrome ) and type `localhost:3000` in the search bar.
+
+
+When going to `localhost:3000` if there pops up an error regarding something like 
+
+    ActionView::Template::Error (Webpacker can't find application.js...
+
+In the terminal, in the app directory, just type
+
+    yarn
+
+You are good to go. Enjoy!
+
 
 ## How to add new users and user accounts to the application
 
