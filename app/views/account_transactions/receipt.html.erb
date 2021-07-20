@@ -26,6 +26,6 @@
 <h1 class = 'd-flex justify-content-center fixed-top'>Transaction summary</h1>
 
 <div class = 'container'>
-    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Account balance: ₹<span><%= @final_balance %></span></h2>
+    <h2 class = 'd-flex justify-content-center' style = 'margin-top: 300px;'>Account balance: ₹<span><%= @final_balance.to_f.round(2) %></span></h2>
     <%= link_to "Click here to finish transaction", root_path, {style: 'margin-top: 200px;', class: 'btn-lg btn-dark d-flex justify-content-center' } %>
 </div>
